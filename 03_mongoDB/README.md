@@ -1,7 +1,8 @@
 # MongoDB Connection
 
+
+## db.js
 ```javascript
-// db.js
 const connectDB = async () => {
     try {
         const connectionInstance =  mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
@@ -12,7 +13,12 @@ const connectDB = async () => {
         
     }
 }
+ 
+```
 
+## index.js
+
+```javascript
 // index.js
 connectDB()
 .then(() => {
@@ -24,5 +30,5 @@ connectDB()
 .catch((err) => {
     console.log(`MongoDB connection ERROR: ${err.message}`);
     
-}) 
+})
 ```
